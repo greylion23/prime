@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Утконосик</title>
+		<style>
+			body {
+				margin: 0;
+			}
+			.main-wrapper {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				font-family: sans-serif;
+			}
+			.header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background: #F1F5F6;
+			}
+			.logo img {
+				width: 156px;
+				padding: 13px;
+				margin-left: 25px;
+			}
+			.header-right {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.tel {
+				display:flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			.tel a {
+				text-decoration: none;
+				color: #000;
+				padding: 10px;
+				font-size: 14px;
+				margin-right: 30px;
+			}
+			.btn-sait {
+				padding: 20px;
+				margin-right: 40px;
+			}
+			.btn-sait button {
+				display: flex;
+				justify-content: space-around;
+				align-items: center;
+				background: #fff;
+				border: 1px solid #e0e3df;
+				border-radius: 5px;
+				padding: 20px;
+				font-size: 12px;
+				width: 172px;
+				height: 35px;
+			}		
+			.btn-sait button:hover {
+				color: green;
+			}
+			.container-first {
+				display: flex;
+				justify-content: space-around;
+				width: 80%;
+				background: #F0F5F5;
+				border-radius: 5px;
+				margin: auto;
+				margin-top: 20px;
+			}
+			.picture-first {
+				padding: 20px;
+			}
+			.picture-first img {
+				width: 240px;
+			}
+			.list-first {
+				list-style: none;
+				padding: 0;
+			}
+			.list-first li {
+				padding-bottom: 5px;
+			}
+			.list-first li:before {
+				content:"•";
+				color: #F6B70D;
+				padding-right: 5px;
+			}
+			.text-first-prime {
+				padding: 10px 0;
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.content-first {
+				padding: 20px;
+			}
+			.content-first span {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.btn-kak {
+				width: 300px;
+				height: 65px;
+				border-radius: 7px;
+				font-size: 16px;
+				font-weight: bold;
+				background: #F6B70D;
+				border: none;
+				margin: 10px 0;
+				padding: 0;
+			}
+			.btn-kak:hover {
+				background: #E39109;
+			}
+			.container-second {
+				display: flex;
+				justify-content: space-around;
+				width: 60%;
+				background: #fff;
+				border-radius: 5px;
+				margin: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			.delivery {
+				padding: 10px;
+			}
+			.delivery span {
+				font-size: 24px;
+			}
+			.list-delivery {
+				list-style: none;
+				padding: 0;
+				padding-top: 5px;
+			}
+			.list-delivery li {
+				padding-bottom: 15px;
+			}
+			.list-delivery li:before {
+				content: "•";
+				color: #F6B70D;
+				padding-right: 5px;
+			}
+			.pay {
+				padding: 10px;
+			}
+			.pay span {
+				font-size: 24px;
+			}
+			.list-pay {
+				list-style: none;
+				padding: 0;
+				padding-top: 5px;
+			}
+			.list-pay li {
+				padding-bottom: 15px;
+			}
+			.list-pay li:last-child {
+				padding-bottom: 0;
+			}
+			.list-pay li:before {
+				content: "•";
+				color: #F6B70D;
+				padding-right: 5px;
+			}
+			.pay a {
+				text-decoration: none;
+				color: #1AA53A;
+			}
+			.pay a:hover {
+				color: green;
+			}
+			.btn-reg {
+				color: #fff;
+				background: #1AA53A;
+				width: 240px;
+				height: 60px;
+				margin: auto;
+				font-size: 16px;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				border-radius: 10px;
+				border: none;
+			}
+			.btn-reg:hover {
+				background: green;
+			}
+			.action {
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				margin: auto;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.action span {
+				font-size: 28px;
+			}
+			.action .btn-read-more {
+				background: #fff;
+				font-size: 12px;
+				border: solid 1px #E0E5E0;
+				border-radius: 10px;
+			}
+			.partners-header {
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				margin: auto;
+				margin-top: 20px;
+				margin-bottom: 20px;
+				font-size: 28px;
+			}
+			.partners {
+				display: flex;
+				justify-content: space-around;
+				width: 80%;
+				background: #fff;
+				border-radius: 5px;
+				margin: auto;
+				margin-top: 15px;
+				margin-bottom: 15px;
+			}
+			.office, .horeca, .reseller {
+				background: #F0F3F3;
+				margin-left: 5px;
+				margin-right: 5px;
+				padding: 23px;
+				border-radius: 10px;
+			}
+			.header-office, .header-horeca, .header-reseller {
+				font-size: 18px;
+				font-weight: bold;
+			}
+			.text-office, .text-horeca, .text-reseller {
+				font-size:14px;
+			}
+			.faq-header {
+				font-size: 28px;
+				width: 70%;
+			}
+			summary {
+			   display:inline-block;
+				 font-size: 20px;
+				 padding: 10px 0;
+			}
+			summary:after {  
+			  content: url("file:///Users/greylion23/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/vniz.png");
+				margin-left: 10px;
+			}
+			details[open] > summary:after {
+			  content: url("file:///Users/greylion23/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/vverh.png");
+			}
+			details[open] > summary {
+				color: #00A538;
+			}
+			details {
+			  display: block;
+			  margin-bottom: .5rem;
+			}
+			.faq {
+				width: 80%;
+				margin: auto;
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			.faq-header {
+				width: 80%;
+				margin: auto;
+			}
+			.answer {
+				font-size: 14px;
+				padding: 25px 20px;
+				box-shadow: 0 0 5px rgba(0,0,0,0.2);
+				border-radius: 10px;
+				margin: 10px 0;
+			}
+			.answer .tel {
+				text-decoration: none;
+				display: contents;
+			}
+			.answer .os {
+				text-decoration: none;
+				color: #009C2E;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main-wrapper">
+			<div class="header">
+				<div class="logo">
+					<a href="https://www.utkonos.ru/">
+						<img src="https://gcdn.utkonos.ru/images/logo/1461651850903.png" alt="logo">
+					</a>
+				</div>
+				<div class="header-right">
+					<div class="btn-sait">
+						<button><img src="file:///Users/greylion23/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/123.png" alt="icon"><span>Основной 						сайт</span></button>
+					</div>
+					<div class="tel">
+						<img src="file:///Users/greylion23/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/222.png" width="14px" height="14px"><a 						href="tel:74957455616">+7 495 745-56-16</a>
+					</div>
+				</div>
+			</div>
+			<div class="container-first">
+				<div class="picture-first">
+					<img src="https://gcdn.utkonos.ru/assets-ng/landings/loyalty/images/utkonos-prime-min.png" alt="утка">
+				</div>
+				<div class="content-first">
+					<div class="text-first-prime">Утконос Prime</div>
+					<span>Дополнительные преимущества</span>
+					<ul class="list-first">
+						<li>2% к стоимости каждого заказа вернется U-бонусами</li>
+						<li>Бесплатная доставка всех заказов</li>
+						<li>В 10 раз больше U-бонусов за покупку любимых товаров</li>
+						<li>Доступ к закрытым акциям и еще больше U-бонусов</li>
+					</ul>
+					<button class="btn-kak">Как получить Утконос Prime</button>
+				</div>
+			</div>
+			<div class="container-second">
+				<div class="delivery">
+					<span>Доставка</span>
+					<ul class="list-delivery">
+						<li>Минимальная сумма заказа &#8211; 3 000 ₽</li>
+						<li>Бесплатная доставка</li>
+						<li>Индивидуальная / выделенная доставка</li>
+					</ul>
+				</div>
+				<div class="pay">
+					<span>Оплата</span>
+					<ul class="list-pay">
+						<li>По выставленному счету</li>
+						<li>Наличными или банковской картой на месте</li>
+						<li>Постоплата</li>	
+					</ul>
+					<a href="#">Подробнее</a>
+				</div>
+			</div>
+			<button class="btn-reg" 			onclick="window.open('file:///Users/greylion23/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/reg.html')">Зарегистрироваться</button>
+			<div class="action">
+				<span>Акции</span>
+				<button class="btn-read-more">Смотреть все</button>
+			</div>
+			<div class="partners-header">
+				<span>C кем мы работаем</span>
+			</div>
+			<div class="partners">
+				<div class="office">
+					<img src="https://gcdn.utkonos.ru/assets-ng/landings/b2b/point-64x64.png" alt="">
+					<p class="header-office">Офисы, предприятия и бизнес-центры</p>
+					<p class="text-office">Привезем и канцелярию, и бумажную продукцию, и продукты на кухню,<br> и бизнес-сувениры</p>
+				</div>
+				<div class="horeca">
+					<img src="https://gcdn.utkonos.ru/assets-ng/landings/b2b/cook-64x64.png" alt="">
+					<p class="header-horeca">HoReCa</p>
+					<p class="text-horeca">Доставим и продукты, и средства гигиены, и бытовую химию</p>
+				</div>
+				<div class="reseller">
+					<img src="https://gcdn.utkonos.ru/assets-ng/landings/b2b/cart-64x64.png" alt="">
+					<p class="header-reseller">Предприниматели</p>
+					<p class="text-reseller">Организуем оптовую поставку нужных товаров по выгодной закупочной цене</p>
+				</div>
+			</div>
+			<button class="btn-reg" 			onclick="window.open('file:///Users/greylion23/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/reg.html')">Зарегистрироваться</button>
+			<div class="faq-header">
+				<span>Вопросы и ответы</span>
+			</div>
+			<div class="faq">
+				<details class="question">
+					<summary>Как стать участником программы лояльности Утконос Club?</summary>
+				  <div class="answer">
+				    	Если вы зарегистрировались на utkonos.ru или в приложении «Утконос» и 
+							подтвердили свой номер телефона и/или электронную почту, вы 
+							автоматически стали участником программы лояльности Утконос Club. Если
+							вы хотите выйти из программы, позвоните нам по номеру <img src="file:///Users/greylion2
+							3/Documents/%D1%8F%20%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA/wa.png" alt="" width=12px> <span><a href="tel:
+							74957752060" class="tel">+7 495 775-20-60</a></span> или напишите через форму <a href="#" class="os">
+							обратной связи.</a>
+					</div>
+				</details>
+				<details class="question">
+				  <summary>Что такое U-бонусы?</summary>
+				  <div class="answer">
+				   	 	U-бонус — это условная единица, кешбэк в размере 1% от всей стоимости покупки. U-бонусы нельзя обналичить, вы может использовать их только для оплаты на сайте utkonos.ru и в 							приложении «Утконос».
+				  </div>
+				</details>
+				<details class="question">
+				  <summary>Когда начисляются U-бонусы?</summary>
+					<div class="answer">
+							U-бонусы начисляются в течение 1-2 дней, после того, как вы получили свой заказ.
+					</div>
+				</details>
+			</div>
+		</div>
+	</body>
+</html>
